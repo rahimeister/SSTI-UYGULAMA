@@ -18,7 +18,8 @@ def comment():
     username = request.form['username']
     comment = request.form['comment']
     
-    # Maskeleme ve SSTI zafiyeti burada
+
+
     masked_name = username[0] + "*" * (len(username) - 1)
     template = f"<p><strong>{masked_name}</strong> adlı kullanıcı dedi ki: {comment}</p>"
 
